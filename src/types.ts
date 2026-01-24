@@ -11,6 +11,7 @@ import enScrapper from '../locales/en/scrapper.json';
 import enApi from '../locales/en/api.json';
 import enTime from '../locales/en/time.json';
 import enErrors from '../locales/en/errors.json';
+import enSystem from '../locales/en/system.json';
 
 // Merge all translation namespaces
 export type TranslationResources = {
@@ -24,6 +25,7 @@ export type TranslationResources = {
   api: typeof enApi;
   time: typeof enTime;
   errors: typeof enErrors;
+  system: typeof enSystem;
 };
 
 // Helper type to extract nested keys (with depth limit to avoid infinite recursion)
@@ -46,7 +48,8 @@ export type TranslationKey =
   | `scrapper.${NestedKeyOf<typeof enScrapper>}`
   | `api.${NestedKeyOf<typeof enApi>}`
   | `time.${NestedKeyOf<typeof enTime>}`
-  | `errors.${NestedKeyOf<typeof enErrors>}`;
+  | `errors.${NestedKeyOf<typeof enErrors>}`
+  | `system.${NestedKeyOf<typeof enSystem>}`;
 
 // Supported languages
 export type SupportedLanguage = 'en' | 'uk' | 'pl';

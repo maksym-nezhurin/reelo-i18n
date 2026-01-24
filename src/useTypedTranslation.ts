@@ -7,14 +7,14 @@ import type { TranslationKey, TranslationOptions } from './types';
  * Provides type-safe translation keys with autocomplete
  */
 export function useTypedTranslation() {
-  const { t: i18nT, ...rest } = useI18nTranslation();
+  const { t: i18nT, ...rest } = useI18nTranslation('translation', { i18n });
 
   const t = (key: TranslationKey, options?: TranslationOptions): string => {
     // Якщо ключ починається з namespace (наприклад, 'menu.sections.main.label'),
     // використовуємо синтаксис з двокрапкою для явного вказання namespace
     const parts = key.split('.');
     const possibleNamespace = parts[0];
-    const namespaces = ['common', 'auth', 'profile', 'menu', 'users', 'cars', 'scrapper', 'api', 'time', 'errors'];
+    const namespaces = ['common', 'auth', 'profile', 'menu', 'users', 'cars', 'scrapper', 'api', 'time', 'errors', 'system'];
     
     if (namespaces.includes(possibleNamespace)) {
       // Використовуємо синтаксис namespace:key

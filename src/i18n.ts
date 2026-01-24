@@ -25,13 +25,20 @@ i18n
     backend: {
       loadPath: '/locales/{{lng}}/{{ns}}.json',
     },
-    ns: ['common', 'auth', 'profile', 'menu', 'users', 'cars', 'scrapper', 'api', 'time', 'errors'],
+    ns: ['common', 'auth', 'profile', 'menu', 'users', 'cars', 'scrapper', 'api', 'time', 'errors', 'system'],
     defaultNS: 'common',
     // Дозволити використання ключів з namespace в форматі 'namespace:key'
     nsSeparator: ':',
     keySeparator: '.',
     // Автоматично шукати в усіх namespaces, якщо ключ не знайдено в defaultNS
-    fallbackNS: ['common', 'auth', 'profile', 'menu', 'users', 'cars', 'scrapper', 'api', 'time', 'errors'],
+    fallbackNS: ['common', 'auth', 'profile', 'menu', 'users', 'cars', 'scrapper', 'api', 'time', 'errors', 'system'],
+    react: {
+      useSuspense: false, // Disable suspense to avoid issues
+    },
+  }, (err) => {
+    if (err) {
+      console.error('i18n initialization error:', err);
+    }
   });
 
 export default i18n;
