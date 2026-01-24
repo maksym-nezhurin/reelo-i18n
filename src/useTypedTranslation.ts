@@ -7,7 +7,7 @@ import type { TranslationKey, TranslationOptions } from './types';
  * Provides type-safe translation keys with autocomplete
  */
 export function useTypedTranslation() {
-  const { t: i18nT, ...rest } = useI18nTranslation('translation', { i18n });
+  const { t: i18nT, ...rest } = useI18nTranslation('common', { i18n });
 
   const t = (key: TranslationKey, options?: TranslationOptions): string => {
     // Якщо ключ починається з namespace (наприклад, 'menu.sections.main.label'),
@@ -19,7 +19,12 @@ export function useTypedTranslation() {
     if (namespaces.includes(possibleNamespace)) {
       // Використовуємо синтаксис namespace:key
       const keyWithoutNamespace = parts.slice(1).join('.');
-      return i18nT(`${possibleNamespace}:${keyWithoutNamespace}`, options) as string;
+      // Ensure namespace is loaded before translation
+      if (!i18n.hasResourceBundle(i18n.language, possibleNamespace)) {
+        i18n.loadNamespaces(possibleNamespace).catch(console.error);
+      }
+      // Use the key without namespace prefix and specify namespace in options
+      return i18nT(keyWithoutNamespace, { ns: possibleNamespace, ...options }) as string;
     }
     
     return i18nT(key, options) as string;
@@ -28,6 +33,7 @@ export function useTypedTranslation() {
   return {
     t,
     ...rest,
+    i18n, // Ensure i18n is available
   };
 }
 

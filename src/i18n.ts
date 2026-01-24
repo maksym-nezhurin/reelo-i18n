@@ -24,9 +24,14 @@ i18n
     },
     backend: {
       loadPath: '/locales/{{lng}}/{{ns}}.json',
+      allowMultiLoading: false,
+      crossDomain: false,
     },
+    debug: process.env.NODE_ENV === 'development', // Enable debug in development
     ns: ['common', 'auth', 'profile', 'menu', 'users', 'cars', 'scrapper', 'api', 'time', 'errors', 'system'],
     defaultNS: 'common',
+    // Preload common namespace on init
+    load: 'languageOnly',
     // Дозволити використання ключів з namespace в форматі 'namespace:key'
     nsSeparator: ':',
     keySeparator: '.',
