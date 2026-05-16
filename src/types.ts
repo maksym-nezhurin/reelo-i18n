@@ -4,6 +4,7 @@
 import enCommon from '../locales/en/common.json';
 import enAuth from '../locales/en/auth.json';
 import enProfile from '../locales/en/profile.json';
+import enClient from '../locales/en/client.json';
 import enMenu from '../locales/en/menu.json';
 import enUsers from '../locales/en/users.json';
 import enCars from '../locales/en/cars.json';
@@ -18,6 +19,7 @@ export type TranslationResources = {
   common: typeof enCommon;
   auth: typeof enAuth;
   profile: typeof enProfile;
+  client: typeof enClient;
   menu: typeof enMenu;
   users: typeof enUsers;
   cars: typeof enCars;
@@ -42,6 +44,7 @@ export type TranslationKey =
   | `common.${NestedKeyOf<typeof enCommon>}`
   | `auth.${NestedKeyOf<typeof enAuth>}`
   | `profile.${NestedKeyOf<typeof enProfile>}`
+  | `client.${NestedKeyOf<typeof enClient>}`
   | `menu.${NestedKeyOf<typeof enMenu>}`
   | `users.${NestedKeyOf<typeof enUsers>}`
   | `cars.${NestedKeyOf<typeof enCars>}`
