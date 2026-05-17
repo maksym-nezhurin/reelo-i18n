@@ -1,5 +1,5 @@
 import { useTranslation as useI18nTranslation } from 'react-i18next';
-import i18n from './i18n';
+import i18n, { enabledNamespaces } from './i18n';
 import type { TranslationKey, TranslationOptions } from './types';
 
 /**
@@ -21,9 +21,7 @@ export function useTypedTranslation(): {
     // використовуємо синтаксис з двокрапкою для явного вказання namespace
     const parts = key.split('.');
     const possibleNamespace = parts[0];
-    const namespaces = ['common', 'auth', 'profile', 'cars', 'time', 'errors', 'system', 'client'];
-    
-    if (namespaces.includes(possibleNamespace)) {
+    if (enabledNamespaces.includes(possibleNamespace)) {
       // Використовуємо синтаксис namespace:key
       const keyWithoutNamespace = parts.slice(1).join('.');
       // Use i18n.t() directly to ensure namespace is properly loaded
