@@ -1,6 +1,6 @@
 # @reelo/i18n
 
-Shared i18n package for Reelo monorepo applications.
+Shared i18n package for Autivo monorepo applications (package name `@reelo/i18n`).
 
 ## Features
 

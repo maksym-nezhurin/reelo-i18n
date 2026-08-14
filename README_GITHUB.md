@@ -1,6 +1,6 @@
 # @reelo/i18n
 
-Shared i18n package for Reelo platform with TypeScript support.
+Shared i18n package for Autivo platform with TypeScript support (npm: `@reelo/i18n`).
 
 ## Installation
 
