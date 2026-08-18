@@ -19,6 +19,7 @@ const baseNamespaces = [
   'errors',
   'system',
   'client',
+  'admin',
 ] as const;
 
 const extraNamespaces = (process.env.NEXT_PUBLIC_I18N_EXTRA_NAMESPACES || process.env.VITE_I18N_EXTRA_NAMESPACES || '')

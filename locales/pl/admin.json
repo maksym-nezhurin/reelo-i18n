@@ -1,0 +1,76 @@
+{
+  "dashboard": {
+    "title": "Panel administracyjny",
+    "description": "Rejestracje użytkowników, firm B2B oraz pojazdy w garażu",
+    "refresh": "Odśwież",
+    "loading": "Ładowanie statystyk…",
+    "error": "Nie udało się załadować statystyk (wymagana rola ADMIN).",
+    "stats": {
+      "users": "Użytkownicy",
+      "usersHint": "+{{last7}} (7 dni) · +{{last30}} (30 dni) · zweryfikowani: {{verified}}",
+      "newUsers": "Nowi użytkownicy",
+      "newUsersHint": "Ostatnie 30 dni: {{last30}}",
+      "companies": "Firmy",
+      "companiesHint": "+{{last7}} (7 dni) · +{{last30}} (30 dni)",
+      "partners": "Partnerzy w katalogu",
+      "partnersHint": "Oczekują na publikację: {{pending}}",
+      "vehicles": "Pojazdy (rekordy)",
+      "vehiclesHint": "+{{last7}} (7 dni) · +{{last30}} (30 dni)",
+      "garage": "Garaż (aktywne)",
+      "garageHint": "+{{last7}} (7 dni) · +{{last30}} (30 dni)",
+      "saleListings": "Ogłoszenia sprzedaży",
+      "saleListingsHint": "Status ACTIVE"
+    },
+    "garageUnavailable": "Statystyki garażu niedostępne — uruchom car-service i ustaw CAR_SERVICE_URL w user-service.",
+    "links": {
+      "allUsers": "Wszyscy użytkownicy →",
+      "b2b": "B2B — firmy i weryfikacja →"
+    },
+    "recentActivity": "Ostatnia aktywność",
+    "newUsersSection": "Nowi użytkownicy",
+    "newCompaniesSection": "Nowe firmy",
+    "noData": "Brak danych",
+    "noAccessTitle": "Witaj w panelu",
+    "noAccessDescription": "Statystyki platformy są dostępne dla administratorów. Skontaktuj się z administratorem, jeśli potrzebujesz dostępu."
+  },
+  "page": {
+    "title": "B2B — użytkownicy i firmy",
+    "description": "Statystyki rejestracji, weryfikacja osób, status firmy, publikacja w katalogu /partners",
+    "noAccess": "Brak dostępu",
+    "loadError": "Nie udało się załadować panelu B2B (wymagana rola ADMIN).",
+    "verificationError": "Aktualizacja weryfikacji nie powiodła się.",
+    "listingError": "Aktualizacja statusu katalogu nie powiodła się.",
+    "companyError": "Aktualizacja statusu firmy nie powiodła się.",
+    "refresh": "Odśwież",
+    "stats": {
+      "users": "Użytkownicy",
+      "newUsers": "Nowi (7 dni)",
+      "newUsersHint": "30 dni: {{last30}}",
+      "companies": "Firmy",
+      "companiesHint": "+{{last7}} (7 dni) · +{{last30}} (30 dni)",
+      "partners": "Partnerzy (published)",
+      "partnersHint": "Oczekują: {{pending}}"
+    },
+    "searchPlaceholder": "Szukaj email, użytkownik, firma…",
+    "tabs": {
+      "users": "Użytkownicy ({{count}})",
+      "companies": "Firmy ({{count}})"
+    },
+    "usersTable": {
+      "user": "Użytkownik",
+      "registered": "Rejestracja",
+      "roles": "Role",
+      "verification": "Weryfikacja",
+      "companies": "Firmy / listing",
+      "noListing": "brak wpisu w katalogu"
+    },
+    "companiesTable": {
+      "company": "Firma",
+      "owner": "Właściciel",
+      "companyStatus": "Status firmy",
+      "catalog": "Katalog",
+      "publication": "Publikacja",
+      "none": "Brak"
+    }
+  }
+}

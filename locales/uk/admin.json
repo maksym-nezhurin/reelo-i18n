@@ -1,0 +1,76 @@
+{
+  "dashboard": {
+    "title": "Адмін-панель",
+    "description": "Реєстрації користувачів, B2B-компанії та авто в гаражах",
+    "refresh": "Оновити",
+    "loading": "Завантаження статистики…",
+    "error": "Не вдалося завантажити статистику (потрібна роль ADMIN).",
+    "stats": {
+      "users": "Користувачі",
+      "usersHint": "+{{last7}} (7 днів) · +{{last30}} (30 днів) · верифіковані: {{verified}}",
+      "newUsers": "Нові користувачі",
+      "newUsersHint": "Останні 30 днів: {{last30}}",
+      "companies": "Компанії",
+      "companiesHint": "+{{last7}} (7 днів) · +{{last30}} (30 днів)",
+      "partners": "Партнери в каталозі",
+      "partnersHint": "Очікують публікації: {{pending}}",
+      "vehicles": "Авто (записи)",
+      "vehiclesHint": "+{{last7}} (7 днів) · +{{last30}} (30 днів)",
+      "garage": "Гараж (активні)",
+      "garageHint": "+{{last7}} (7 днів) · +{{last30}} (30 днів)",
+      "saleListings": "Оголошення продажу",
+      "saleListingsHint": "Статус ACTIVE"
+    },
+    "garageUnavailable": "Статистика гаража недоступна — запустіть car-service і встановіть CAR_SERVICE_URL в user-service.",
+    "links": {
+      "allUsers": "Усі користувачі →",
+      "b2b": "B2B — компанії та верифікація →"
+    },
+    "recentActivity": "Остання активність",
+    "newUsersSection": "Нові користувачі",
+    "newCompaniesSection": "Нові компанії",
+    "noData": "Немає даних",
+    "noAccessTitle": "Ласкаво просимо до панелі",
+    "noAccessDescription": "Статистика платформи доступна адміністраторам. Зверніться до адміністратора, якщо потрібен доступ."
+  },
+  "page": {
+    "title": "B2B — користувачі та компанії",
+    "description": "Статистика реєстрацій, верифікація осіб, статус компанії, публікація в каталозі /partners",
+    "noAccess": "Доступ заборонено",
+    "loadError": "Не вдалося завантажити B2B-панель (потрібна роль ADMIN).",
+    "verificationError": "Не вдалося оновити верифікацію.",
+    "listingError": "Не вдалося оновити статус у каталозі.",
+    "companyError": "Не вдалося оновити статус компанії.",
+    "refresh": "Оновити",
+    "stats": {
+      "users": "Користувачі",
+      "newUsers": "Нові (7 днів)",
+      "newUsersHint": "30 днів: {{last30}}",
+      "companies": "Компанії",
+      "companiesHint": "+{{last7}} (7 днів) · +{{last30}} (30 днів)",
+      "partners": "Партнери (опубліковані)",
+      "partnersHint": "Очікують: {{pending}}"
+    },
+    "searchPlaceholder": "Пошук за email, користувачем, компанією…",
+    "tabs": {
+      "users": "Користувачі ({{count}})",
+      "companies": "Компанії ({{count}})"
+    },
+    "usersTable": {
+      "user": "Користувач",
+      "registered": "Реєстрація",
+      "roles": "Ролі",
+      "verification": "Верифікація",
+      "companies": "Компанії / оголошення",
+      "noListing": "немає запису в каталозі"
+    },
+    "companiesTable": {
+      "company": "Компанія",
+      "owner": "Власник",
+      "companyStatus": "Статус компанії",
+      "catalog": "Каталог",
+      "publication": "Публікація",
+      "none": "Немає"
+    }
+  }
+}
