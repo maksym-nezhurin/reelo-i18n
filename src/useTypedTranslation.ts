@@ -1,3 +1,4 @@
+import { useCallback } from 'react';
 import { useTranslation as useI18nTranslation } from 'react-i18next';
 import i18n, { enabledNamespaces } from './i18n';
 import type { TranslationKey, TranslationOptions } from './types';
@@ -16,21 +17,29 @@ export function useTypedTranslation(): {
     useSuspense: false,
   });
 
-  const t = (key: TranslationKey | string, options?: TranslationOptions): string => {
-    // Якщо ключ починається з namespace (наприклад, 'menu.sections.main.label'),
-    // використовуємо синтаксис з двокрапкою для явного вказання namespace
-    const parts = key.split('.');
-    const possibleNamespace = parts[0];
-    if (enabledNamespaces.includes(possibleNamespace)) {
-      // Використовуємо синтаксис namespace:key
-      const keyWithoutNamespace = parts.slice(1).join('.');
-      // Use i18n.t() directly to ensure namespace is properly loaded
-      return i18n.t(keyWithoutNamespace, { ns: possibleNamespace, ...options }) as string;
-    }
-    
-    // For keys without namespace prefix, use default namespace
-    return i18nT(key, options) as string;
-  };
+  // useCallback: without this, `t` gets a brand-new function identity on every render.
+  // Any consumer doing `useCallback(fn, [t])` + `useEffect(() => void fn(), [fn])` (a very
+  // common data-loading pattern in this codebase) then re-fires that effect on every
+  // render, not just on mount/dependency change — an unbounded fetch loop. Found via a
+  // live GET /v1/admin/overview request loop (apps/admin Dashboard.tsx `load`).
+  const t = useCallback(
+    (key: TranslationKey | string, options?: TranslationOptions): string => {
+      // Якщо ключ починається з namespace (наприклад, 'menu.sections.main.label'),
+      // використовуємо синтаксис з двокрапкою для явного вказання namespace
+      const parts = key.split('.');
+      const possibleNamespace = parts[0];
+      if (enabledNamespaces.includes(possibleNamespace)) {
+        // Використовуємо синтаксис namespace:key
+        const keyWithoutNamespace = parts.slice(1).join('.');
+        // Use i18n.t() directly to ensure namespace is properly loaded
+        return i18n.t(keyWithoutNamespace, { ns: possibleNamespace, ...options }) as string;
+      }
+
+      // For keys without namespace prefix, use default namespace
+      return i18nT(key, options) as string;
+    },
+    [i18nT],
+  );
 
   return {
     t,
