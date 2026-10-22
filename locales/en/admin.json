@@ -136,7 +136,8 @@
       "staleResult": "The record changed since the request, so it was marked STALE and not applied.",
       "rejected": "Request rejected.",
       "alreadyProcessed": "This request has already been processed. The list has been refreshed.",
-      "actionError": "Could not save the decision. Please try again."
+      "actionError": "Could not save the decision. Please try again.",
+      "noteVisibleToOwner": "The vehicle owner will see this note."
     },
     "fields": {
       "type": "Type",

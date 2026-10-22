@@ -136,7 +136,8 @@
       "staleResult": "Wpis zmienił się po złożeniu wniosku, więc wniosek oznaczono jako STALE i nie zastosowano.",
       "rejected": "Wniosek odrzucony.",
       "alreadyProcessed": "Ten wniosek został już rozpatrzony. Lista została odświeżona.",
-      "actionError": "Nie udało się zapisać decyzji. Spróbuj ponownie."
+      "actionError": "Nie udało się zapisać decyzji. Spróbuj ponownie.",
+      "noteVisibleToOwner": "Ten komentarz zobaczy właściciel pojazdu."
     },
     "fields": {
       "type": "Typ",
