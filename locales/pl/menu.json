@@ -57,6 +57,10 @@
         "role_examples": {
           "label": "Przykłady ról",
           "tooltip": "Przykłady ról"
+        },
+        "history_moderation": {
+          "label": "Moderacja historii serwisowej",
+          "tooltip": "Rozpatrywanie wniosków właścicieli o zmianę lub usunięcie historii serwisowej"
         }
       }
     },
