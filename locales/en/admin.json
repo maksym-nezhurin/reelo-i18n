@@ -76,5 +76,91 @@
       "publication": "Publication",
       "none": "None"
     }
+  },
+  "historyModeration": {
+    "title": "Service history moderation",
+    "description": "Owners' requests to edit or delete service history records. Edits made within 24 hours of creating a record apply right away and appear here as AUTO_APPLIED.",
+    "refresh": "Refresh",
+    "noAccess": "Access denied",
+    "loadError": "Could not load change requests.",
+    "empty": "No change requests with this status.",
+    "total": "Total: {{count}}",
+    "filters": {
+      "status": "Status",
+      "targetType": "Record type",
+      "allTypes": "All types"
+    },
+    "targetType": {
+      "MAINTENANCE": "Maintenance record",
+      "SERVICE_VISIT": "Service visit"
+    },
+    "action": {
+      "UPDATE": "Edit",
+      "DELETE": "Delete"
+    },
+    "table": {
+      "createdAt": "Submitted",
+      "vehicle": "Vehicle",
+      "target": "Record",
+      "action": "Request",
+      "warnings": "Warnings",
+      "status": "Status",
+      "open": "Review"
+    },
+    "detail": {
+      "title": "Change request",
+      "loadError": "Could not load the change request.",
+      "requestedBy": "Requested by",
+      "submittedAt": "Submitted",
+      "reason": "Owner's reason",
+      "noReason": "No reason given.",
+      "reviewedBy": "Reviewed by",
+      "reviewedAt": "Reviewed",
+      "reviewNote": "Review note",
+      "field": "Field",
+      "before": "Before",
+      "proposed": "Proposed",
+      "current": "Current",
+      "deleteNotice": "The owner asks to delete this record. Approving hides it from the vehicle history (soft delete).",
+      "noChanges": "No field changes.",
+      "staleNotice": "The record has changed or been deleted since this request was submitted. Approving will mark the request STALE without applying it.",
+      "warningsTitle": "Automatic checks",
+      "noWarnings": "No warnings.",
+      "lineItems": "{{count}} line items",
+      "noteLabel": "Review note",
+      "notePlaceholder": "Required when rejecting; optional when approving.",
+      "noteRequired": "Add a note of at least 3 characters to reject.",
+      "approve": "Approve",
+      "reject": "Reject",
+      "approved": "Request approved and applied.",
+      "staleResult": "The record changed since the request, so it was marked STALE and not applied.",
+      "rejected": "Request rejected.",
+      "alreadyProcessed": "This request has already been processed. The list has been refreshed.",
+      "actionError": "Could not save the decision. Please try again."
+    },
+    "fields": {
+      "type": "Type",
+      "title": "Title",
+      "details": "Details",
+      "mileageKm": "Mileage (km)",
+      "performedAt": "Date",
+      "costAmount": "Cost",
+      "costCurrency": "Currency",
+      "odometerKm": "Odometer (km)",
+      "totalCost": "Total cost",
+      "notes": "Notes",
+      "organizationId": "Service company",
+      "draftCompanyId": "Unlisted company",
+      "providerSnapshot": "Provider details",
+      "lineItems": "Line items"
+    },
+    "checks": {
+      "MILEAGE_BELOW_PREVIOUS": "Mileage is lower than on an earlier record",
+      "MILEAGE_ABOVE_NEXT": "Mileage is higher than on a later record",
+      "DATE_BEFORE_VEHICLE_YEAR": "Date is before the vehicle's model year",
+      "COST_JUMP": "Cost changed sharply",
+      "LINE_ITEMS_TOTAL_MISMATCH": "Line items don't add up to the total cost",
+      "UNKNOWN": "Other warning"
+    }
   }
 }

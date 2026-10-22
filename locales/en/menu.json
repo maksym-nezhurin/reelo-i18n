@@ -57,6 +57,10 @@
         "role_examples": {
           "label": "Role Examples",
           "tooltip": "Role Examples"
+        },
+        "history_moderation": {
+          "label": "Service history moderation",
+          "tooltip": "Review owners' requests to edit or delete service history"
         }
       }
     },

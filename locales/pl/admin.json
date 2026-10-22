@@ -76,5 +76,91 @@
       "publication": "Publikacja",
       "none": "Brak"
     }
+  },
+  "historyModeration": {
+    "title": "Moderacja historii serwisowej",
+    "description": "Wnioski właścicieli o zmianę lub usunięcie wpisów historii serwisowej. Zmiany w ciągu 24 godzin od utworzenia wpisu są stosowane od razu i pojawiają się tu ze statusem AUTO_APPLIED.",
+    "refresh": "Odśwież",
+    "noAccess": "Brak dostępu",
+    "loadError": "Nie udało się wczytać wniosków.",
+    "empty": "Brak wniosków o tym statusie.",
+    "total": "Łącznie: {{count}}",
+    "filters": {
+      "status": "Status",
+      "targetType": "Typ wpisu",
+      "allTypes": "Wszystkie typy"
+    },
+    "targetType": {
+      "MAINTENANCE": "Wpis serwisowy",
+      "SERVICE_VISIT": "Wizyta w serwisie"
+    },
+    "action": {
+      "UPDATE": "Zmiana",
+      "DELETE": "Usunięcie"
+    },
+    "table": {
+      "createdAt": "Złożono",
+      "vehicle": "Pojazd",
+      "target": "Wpis",
+      "action": "Wniosek",
+      "warnings": "Ostrzeżenia",
+      "status": "Status",
+      "open": "Rozpatrz"
+    },
+    "detail": {
+      "title": "Wniosek o zmianę",
+      "loadError": "Nie udało się wczytać wniosku.",
+      "requestedBy": "Wnioskodawca",
+      "submittedAt": "Złożono",
+      "reason": "Powód podany przez właściciela",
+      "noReason": "Nie podano powodu.",
+      "reviewedBy": "Rozpatrzył",
+      "reviewedAt": "Rozpatrzono",
+      "reviewNote": "Komentarz moderatora",
+      "field": "Pole",
+      "before": "Było",
+      "proposed": "Będzie",
+      "current": "Obecnie",
+      "deleteNotice": "Właściciel prosi o usunięcie tego wpisu. Po zatwierdzeniu wpis zniknie z historii pojazdu (miękkie usunięcie).",
+      "noChanges": "Brak zmian w polach.",
+      "staleNotice": "Wpis zmienił się lub został usunięty po złożeniu wniosku. Zatwierdzenie oznaczy wniosek jako STALE bez stosowania zmian.",
+      "warningsTitle": "Automatyczne kontrole",
+      "noWarnings": "Brak ostrzeżeń.",
+      "lineItems": "Pozycje: {{count}}",
+      "noteLabel": "Komentarz moderatora",
+      "notePlaceholder": "Wymagany przy odrzuceniu, opcjonalny przy zatwierdzeniu.",
+      "noteRequired": "Aby odrzucić, dodaj komentarz o długości co najmniej 3 znaków.",
+      "approve": "Zatwierdź",
+      "reject": "Odrzuć",
+      "approved": "Wniosek zatwierdzony i zastosowany.",
+      "staleResult": "Wpis zmienił się po złożeniu wniosku, więc wniosek oznaczono jako STALE i nie zastosowano.",
+      "rejected": "Wniosek odrzucony.",
+      "alreadyProcessed": "Ten wniosek został już rozpatrzony. Lista została odświeżona.",
+      "actionError": "Nie udało się zapisać decyzji. Spróbuj ponownie."
+    },
+    "fields": {
+      "type": "Typ",
+      "title": "Tytuł",
+      "details": "Szczegóły",
+      "mileageKm": "Przebieg (km)",
+      "performedAt": "Data",
+      "costAmount": "Koszt",
+      "costCurrency": "Waluta",
+      "odometerKm": "Licznik (km)",
+      "totalCost": "Koszt całkowity",
+      "notes": "Notatki",
+      "organizationId": "Serwis",
+      "draftCompanyId": "Serwis spoza katalogu",
+      "providerSnapshot": "Dane wykonawcy",
+      "lineItems": "Pozycje"
+    },
+    "checks": {
+      "MILEAGE_BELOW_PREVIOUS": "Przebieg niższy niż we wcześniejszym wpisie",
+      "MILEAGE_ABOVE_NEXT": "Przebieg wyższy niż w późniejszym wpisie",
+      "DATE_BEFORE_VEHICLE_YEAR": "Data wcześniejsza niż rok modelowy pojazdu",
+      "COST_JUMP": "Koszt zmienił się gwałtownie",
+      "LINE_ITEMS_TOTAL_MISMATCH": "Suma pozycji nie zgadza się z kosztem całkowitym",
+      "UNKNOWN": "Inne ostrzeżenie"
+    }
   }
 }
